@@ -12,12 +12,19 @@
 </head>
 <body>
 
-  <div ng-controller="TodoController">{{ someValue }}</div>
+  <div ng-controller="TodoController">
+    <input type="text" ng-model="newTodoItem" />
+    <input type="button" value="Add" ng-click="addItem()" />
+    <div ng-repeat="todoItem in todoList">
+      <span>{{ todoItem.item }}</span>
+      <a ng-click="removeItem($index)">{{ '\u2718' }}</a>
+    </div>
+  <div>
 
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
-  <script src="js/controllers/todo_controller.js"></script>
+  <script src="js/controllers/todoController.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

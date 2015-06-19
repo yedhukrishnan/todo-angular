@@ -10,7 +10,7 @@ module.exports = function(config){
       'app/app.js',
       'app/components/**/*.js',
       'app/js/**/*.js',
-      'test/**/*.js'
+      'spec/**/*.js'
     ],
 
     autoWatch : true,
