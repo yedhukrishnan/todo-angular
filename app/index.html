@@ -1,4 +1,4 @@
-<html lang="en" ng-app="todoApp" class="no-js">
+<html lang="en" ng-app="todoApp">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +12,12 @@
 </head>
 <body>
 
-  <div class="content"></div>
+  <div ng-controller="TodoController">{{ someValue }}</div>
 
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
+  <script src="js/controllers/todo_controller.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
