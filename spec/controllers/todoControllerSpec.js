@@ -19,9 +19,11 @@ describe('TodoController', function() {
     expect(scope.newTodoItem).toEqual('');
   });
 
-  it('deletes a todo item', function() {
-    scope.todoList = [{ item: 'item 1' }];
-    scope.removeItem();
-    expect(scope.todoList.length).toBe(0);
+  it('deletes todo item at a given position', function() {
+    scope.todoList = [{ item: 'item 1' }, { item: 'item 2' }, { item: 'item 3'}];
+    expect(scope.todoList[1].item).toEqual('item 2')
+    scope.removeItem(1);
+    expect(scope.todoList[1].item).toEqual('item 3')
+    expect(scope.todoList.length).toBe(2);
   });
 });

@@ -1,0 +1,18 @@
+<div class="row" ng-controller="TodoController">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="new-todo">
+      <input type="text" ng-model="newTodoItem" class="form-control"/>
+      <input type="button" class="btn btn-default" value="Add" ng-click="addItem()"/>
+    </div>
+    <div class="todo-items">
+      <div class="panel panel-default" ng-repeat="todoItem in todoList">
+        <div class="panel-body">
+          <span>{{ todoItem.item }}</span>
+          <a ng-click="removeItem($index)" class="remove-item">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

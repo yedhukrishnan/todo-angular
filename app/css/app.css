@@ -1,0 +1,16 @@
+body {
+  background-color: #EEE;
+  padding: 1%;
+}
+
+.new-todo {
+  text-align: center;
+}
+
+.new-todo input {
+  margin-bottom: 5px;
+}
+
+.remove-item {
+  float: right;
+}
